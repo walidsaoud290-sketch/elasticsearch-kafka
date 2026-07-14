@@ -4,6 +4,6 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 
 import backend.backend.documents.BookDocument;
 
-public interface BookElasticRepo extends ElasticsearchRepository<BookDocument,Long>{
+public interface BookElasticRepo extends ElasticsearchRepository<BookDocument,String>{
     
 }

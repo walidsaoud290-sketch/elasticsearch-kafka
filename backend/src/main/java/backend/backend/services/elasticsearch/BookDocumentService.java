@@ -19,7 +19,7 @@ public class BookDocumentService {
     // Search with prefix
     public ResponseEntity<?> searchByField(String keyword){
         NativeQuery query = NativeQuery.builder()
-        .withQuery(q -> q.prefix(p -> p.field("title").value(keyword)))
+        .withQuery(q -> q.matchPhrasePrefix(p -> p.field("title").query(keyword)))
         .build();
         List<BookDocument> list = elasticsearchOperations.search(query,BookDocument.class).stream().map(SearchHit::getContent).toList();
         return ResponseEntity.status(200).body(list);

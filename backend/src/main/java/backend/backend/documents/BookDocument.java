@@ -17,7 +17,7 @@ public class BookDocument {
     @Id
     private String id;
     // pour l'autocomplete
-    @Field(type = FieldType.Search_As_You_Type)
+    @Field(type = FieldType.Text)
     private String title;
     @Field(type = FieldType.Text)
     private String author;

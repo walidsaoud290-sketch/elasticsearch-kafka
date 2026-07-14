@@ -5,7 +5,7 @@ const AutoComplete = () => {
   return (
     <div className='auto-complete-div'>
         <textarea name="" id="" onChange={e => setText(e.target.value)}>
-
+        
         </textarea>
     </div>
   )
